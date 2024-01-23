@@ -196,7 +196,7 @@ public class CartDataServiceImpl implements CartDataService {
             try {
                 int variantIDQty = cartItem.getVariantid_qty();
                 String productId = cartItem.getProductid();
-                String productApiUrl = "https://product.prod.psi.initz.run/multikart/v1/product/byvariantid";
+                String productApiUrl = productMicroserviceBaseUrl;
 
                 UriComponentsBuilder builder = UriComponentsBuilder.fromUriString(productApiUrl)
                         .queryParam("productId", productId)
